@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
+/* ─── Brand tokens ─────────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --red: #cc2324;
+  --red-dark: #9e1a1b;
+  --off-white: #f5f2ef;
+  --stone: #e8e5e1;
+  --charcoal: #1e1e20;
 }
 
+/* Register brand colours as Tailwind theme tokens */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-off-white: var(--off-white);
+  --color-stone: var(--stone);
+  --color-charcoal: var(--charcoal);
+
+  --font-sans: var(--font-archivo);
+  --font-display: var(--font-archivo-black);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--off-white);
+  color: var(--charcoal);
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Typography utilities ──────────────────────────────────────────────────── */
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.section-title {
+  font-family: var(--font-archivo-black), sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--charcoal);
+}
+
+.font-display {
+  font-family: var(--font-archivo-black), sans-serif;
+}
+
+/* ─── Button utilities ──────────────────────────────────────────────────────── */
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--red);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-red:hover {
+  background-color: var(--red-dark);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: transparent;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--red);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+/* ─── Reveal animation ──────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay helpers */
+.d1 { transition-delay: 0ms; }
+.d2 { transition-delay: 100ms; }
+.d3 { transition-delay: 200ms; }
+.d4 { transition-delay: 300ms; }
+
+/* ─── Hero sweep keyframe ────────────────────────────────────────────────────── */
+@keyframes sweep-across {
+  from { transform: skewX(-8deg) translateX(0); }
+  to   { transform: skewX(-8deg) translateX(100%); }
+}
+
+/* ─── Marquee ────────────────────────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─── Scroll indicator bounce ────────────────────────────────────────────────── */
+@keyframes bounce-indicator {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+/* ─── Service cards ──────────────────────────────────────────────────────────── */
+.service-card {
+  background: #fff;
+  border-left: 3px solid transparent;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  border-left-color: var(--red);
+  box-shadow: 0 4px 16px rgba(204, 35, 36, 0.08), 0 16px 48px rgba(30, 30, 32, 0.10);
+  transform: translateY(-3px);
+}
+
+/* ─── Feature cards ──────────────────────────────────────────────────────────── */
+.feature-card {
+  background: #fff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 16px rgba(204, 35, 36, 0.08), 0 16px 48px rgba(30, 30, 32, 0.10);
+  transform: translateY(-3px);
+}
+
+/* ─── White CTA button (for red background sections) ────────────────────────── */
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #fff;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-white:hover {
+  background-color: var(--off-white);
+  color: var(--red-dark);
 }
