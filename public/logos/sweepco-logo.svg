@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 185" role="img" aria-label="Sweepco logo">
+  <defs>
+    <!-- Gradient: dark red at bottom-left, lighter red at top-right,
+         matching the brand identity visible in the logo reference -->
+    <linearGradient id="g" x1="46" y1="136" x2="154" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#9E1A1B"/>
+      <stop offset="45%"  stop-color="#CC2324"/>
+      <stop offset="100%" stop-color="#E06464"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    Circular icon: 4 concentric rings of arc segments with rounded caps.
+    Each ring is split into a major arc (250 deg) and a minor arc (70 deg),
+    with two 20-deg gaps. The gap positions rotate 20 deg clockwise per ring
+    (outer to inner), creating the sweeping/rotation visual.
+
+    All rings share center (100, 82).
+    Stroke-width 7, stroke-linecap round, no fill.
+    sweep-flag=1 (clockwise), large-arc-flag per arc span.
+
+    Ring 4 gaps: 200-220 deg, 290-310 deg
+    Ring 3 gaps: 220-240 deg, 310-330 deg  (rotated 20 deg)
+    Ring 2 gaps: 240-260 deg, 330-350 deg  (rotated 40 deg)
+    Ring 1 gaps: 260-280 deg, 350-10 deg   (rotated 60 deg)
+  -->
+
+  <!-- Ring 4 (r=54) -->
+  <!-- Major arc: 310 to 200 deg clockwise (250 deg, large-arc=1) -->
+  <path d="M 134.71 40.64 A 54 54 0 1 1 49.26 63.53"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Minor arc: 220 to 290 deg clockwise (70 deg, large-arc=0) -->
+  <path d="M 58.64 47.29 A 54 54 0 0 1 118.47 31.26"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Ring 3 (r=42) -->
+  <!-- Major arc: 330 to 220 deg clockwise (250 deg, large-arc=1) -->
+  <path d="M 136.37 61.00 A 42 42 0 1 1 67.83 55.01"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Minor arc: 240 to 310 deg clockwise (70 deg, large-arc=0) -->
+  <path d="M 79.00 45.63 A 42 42 0 0 1 126.99 49.83"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Ring 2 (r=30) -->
+  <!-- Major arc: 350 to 240 deg clockwise (250 deg, large-arc=1) -->
+  <path d="M 129.54 76.79 A 30 30 0 1 1 85.00 56.02"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Minor arc: 260 to 330 deg clockwise (70 deg, large-arc=0) -->
+  <path d="M 94.79 52.46 A 30 30 0 0 1 125.98 67.00"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Ring 1 (r=18) -->
+  <!-- Major arc: 10 to 260 deg clockwise (250 deg, large-arc=1) -->
+  <path d="M 117.73 85.12 A 18 18 0 1 1 96.88 64.27"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Minor arc: 280 to 350 deg clockwise (70 deg, large-arc=0) -->
+  <path d="M 103.12 64.27 A 18 18 0 0 1 117.73 78.88"
+        fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Center dot -->
+  <circle cx="100" cy="82" r="7" fill="url(#g)"/>
+
+  <!-- Wordmark -->
+  <text
+    x="100"
+    y="165"
+    text-anchor="middle"
+    font-family="'Archivo Black', 'Arial Black', Impact, sans-serif"
+    font-weight="900"
+    font-size="30"
+    letter-spacing="-0.5"
+    fill="#CC2324"
+  >SWEEPCO</text>
+</svg>

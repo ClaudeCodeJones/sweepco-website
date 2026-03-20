@@ -41,7 +41,7 @@ export default function Navbar() {
       }}
     >
       {/* Main bar */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 h-[80px] flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 h-14 md:h-[80px] flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
