@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { brand } from "@/config/brand";
 
@@ -10,6 +13,9 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
+
   return (
     <footer style={{ background: "var(--charcoal)", color: "#fff" }}>
       {/* Main grid */}
