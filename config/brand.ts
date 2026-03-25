@@ -1,5 +1,5 @@
 export const brand = {
-  name: "Sweepco",
+  name: "SweepCo",
   tagline: "Reliable. Efficient. Trusted.",
   phone: "0800 000 000",
   email: "info@sweepco.co.nz",

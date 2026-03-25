@@ -87,7 +87,7 @@ export default function BeforeAfterSlider() {
         />
       </div>
 
-      {/* Sweepco logo — wipe reveal tied directly to divider position (no CSS transition).
+      {/* SweepCo logo — wipe reveal tied directly to divider position (no CSS transition).
           clipPath inset(0 ${100-split}% 0 0) progressively uncovers the logo left-to-right
           as the divider sweeps right, and clips it back when dragging left.
           z-index 5: above image panels, below divider (10), labels (20), gradient (20), headline (30) */}
@@ -112,7 +112,7 @@ export default function BeforeAfterSlider() {
           >
             <Image
               src="/logos/sweepco-logo.svg"
-              alt="Sweepco logo"
+              alt="SweepCo logo"
               width={540}
               height={499}
               style={{

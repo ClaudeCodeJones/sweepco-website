@@ -21,11 +21,9 @@ const archivoblack = Archivo_Black({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: brand.name,
-    template: `%s | ${brand.name}`,
-  },
-  description: site.description,
+  title: "SweepCo | Coming Soon",
+  description:
+    "SweepCo provides professional sweeping services across New Zealand. Website launching soon.",
   metadataBase: new URL(site.url),
 };
 

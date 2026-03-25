@@ -77,7 +77,7 @@ Security patterns include:
 ---
 
 ## Data Layer
-No branch locations. Sweepco operates exclusively from Christchurch, New Zealand.
+No branch locations. SweepCo operates exclusively from Christchurch, New Zealand.
 
 ---
 
@@ -89,7 +89,7 @@ Use only when referring to the parent umbrella brand that includes:
 - MW Training & Planning
 - The Temp Company
 - QualCard
-- Sweepco
+- SweepCo
 
 Never use:
 - MAW Group
@@ -99,10 +99,10 @@ The correct name is always: **MW Group**
 
 ---
 
-### Sweepco
+### SweepCo
 Use when referring to the road sweeping business.
 
-Sweepco provides professional road sweeping services in Christchurch including:
+SweepCo provides professional road sweeping services in Christchurch including:
 - Chip seal sweeping (post-seal aggregate removal)
 - General road sweeping
 - Construction site cleanup
