@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -45,17 +46,18 @@ export default function Navbar() {
       {/* Main bar */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 h-14 md:h-[80px] flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-display text-xl tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded"
-          style={{
-            color: "var(--red)",
-            fontFamily: "var(--font-archivo-black), sans-serif",
-            letterSpacing: "-0.03em",
-          }}
-        >
-          SWEEPCO
-        </Link>
+        {pathname !== "/preview" && (
+          <Link href="/" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red rounded">
+            <Image
+              src="/logos/sweepco_logo_horizontal.png"
+              alt="SweepCo"
+              width={160}
+              height={40}
+              style={{ width: "160px", height: "auto" }}
+              priority
+            />
+          </Link>
+        )}
 
         {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
